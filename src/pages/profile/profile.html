@@ -1,0 +1,44 @@
+<!--
+  Generated template for the ProfilePage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+
+
+
+<ion-content >
+  <div class="info">
+    <div class="textI">
+      <span style="display:block; font-size: 1.5em;">¡Estas Inactivo!</span>
+      <span>Parece que no has completado tu perfil y te estas perdiendo todas las ordenes que tenemos para ti.</span>
+    </div>
+    <div>
+      <img class="profileI" [src]="avatar">
+      <span class="name">{{name}}</span>
+    </div>
+  </div>
+   <ion-item>
+    <ion-label color="primary" stacked>Telefono</ion-label>
+    <ion-input type="number" placeholder="" [(ngModel)]="phone"></ion-input>
+  </ion-item>
+  <ion-list radio-group [(ngModel)]="transport" color="black">
+
+    <ion-list-header>
+      Medio de transporte:
+    </ion-list-header>
+
+    <ion-item>
+      <ion-label>BICICLETA</ion-label>
+      <ion-radio value="cycle"></ion-radio>
+    </ion-item>
+    <ion-item>
+      <ion-label>MOTO</ion-label>
+      <ion-radio value="moto"></ion-radio>
+    </ion-item>
+  </ion-list>
+  <div class="actionsG">
+    <button ion-button color="dark" (click)="continueInactive()">SEGUIR INACTIVO</button>
+    <button ion-button color="secondary" (click)="active()">ACTIVARME</button>
+  </div>
+</ion-content>

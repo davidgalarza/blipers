@@ -1,16 +1,73 @@
-// http://ionicframework.com/docs/v2/theming/
-
-
-// App Global Sass
-// --------------------------------------------------
-// Put style rules here that you want to apply globally. These
-// styles are for the entire app and not just one component.
-// Additionally, this file can be also used as an entry point
-// to import other Sass files to be included in the output CSS.
-//
-// Shared Sass variables, which can be used to adjust Ionic's
-// default Sass variables, belong in "theme/variables.scss".
-//
-// To declare rules for a specific mode, create a child rule
-// for the .md, .ios, or .wp mode classes. The mode class is
-// automatically applied to the <body> element in the app.
+$main: #FF585F;
+$light: #FF767C;
+$green: #00a083;
+$background: #ECECEC;
+$yellow: #FDE74C;
+@font-face {
+  font-family: 'Trueno';
+  src: url('../assets/fonts/trueno/TruenoBd.otf');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Nexa';
+  src: url('../assets/fonts/nexa/Nexa Light.otf');
+  font-weight: normal;
+  font-style: normal;
+}
+.header-md::after, .tabs-md[tabsPlacement="top"] > .tabbar::after, .footer-md::before, .tabs-md[tabsPlacement="bottom"] > .tabbar::before {
+  content: none !important;
+}
+.header-ios::after, .tabs-ios[tabsPlacement="top"] > .tabbar::after, .footer-ios::before, .tabs-ios[tabsPlacement="bottom"] > .tabbar::before {
+  content: none !important;
+}
+.toolbar-background-md{
+  background-color: $main;
+}
+.avatarH{
+  width: 4em;
+  height: 4em;
+  display: inline-block;
+}
+.groupC{
+  display: inline-block;
+  top: 0;
+  position: absolute;
+  margin: 0px;
+  margin-top: 2em;
+  padding: 0px;
+  color: #ffffff;
+}
+.infoT{
+  margin: 0px;
+  padding: 0px;
+  font-family: 'Trueno';
+}
+.headerC{
+  margin: 1em 1em;
+}
+.buttonA{
+  width: 90%;
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-bottom: 1em;
+  background-color: $green;
+  font-family: 'Trueno';
+}
+.sidemenuC{
+  
+     background-color: $main;
+ }
+ .itemSide{
+     background-color: $main;
+     color: #FFFFFF;
+     border-bottom: none;
+     font-weight: bold;
+     font-family: 'Trueno';
+ }
+ .list-md .item-block .item-inner {
+     border-bottom: none;
+     }
+     .scroll-content {
+      overflow-y: auto !important;
+   }

@@ -1,0 +1,43 @@
+page-login {
+
+
+    .item-input .label-md, .item-select .label-md, .item-datetime .label-md, .item-input .label-ios, .item-select .label-ios, .item-datetime .label-ios{
+        color: #FFFFFF;
+    }
+  ion-content{
+    font-size: 3.8vw
+  }
+  
+  .toolbar-background-md, .toolbar-background-ios{
+      background: $main !important;
+  }
+  .content-md, .content-ios{
+      color: #000;
+      background-color: $main;
+  }
+  .button-md, .button-ios{
+      background-color: #007D8C;
+  }
+    .item-md, .item-ios{
+        background-color: $main !important;
+    }
+    .loginF{
+        width: 80%;
+        margin: auto;
+    }
+    .logo{
+        width: 60%; 
+      display: inherit;
+    margin:auto;
+    padding-top: 5em; 
+    }
+    .welcomeM{
+        width: 60%;
+        display: inherit;
+    margin:auto;
+    margin-top: 1.2em;
+    margin-bottom: 1.2em;
+        color: #FFFFFF;
+        font-size: 1.5em;
+    }
+}

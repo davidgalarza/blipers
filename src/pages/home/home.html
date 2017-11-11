@@ -3,16 +3,115 @@
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title>Home</ion-title>
+    <ion-title>Bliper</ion-title>
   </ion-navbar>
+    <ion-toolbar no-border-top>
+    <ion-segment [(ngModel)]="tabs">
+      <ion-segment-button value="avalibleOrders">
+        SIN TOMAR
+      </ion-segment-button>
+      <ion-segment-button value="takenOrders">
+        TOMADOS
+      </ion-segment-button>
+      <ion-segment-button value="personalizedOrders">
+        PERSONALIZADOS
+      </ion-segment-button>
+    </ion-segment>
+  </ion-toolbar>
 </ion-header>
 
 <ion-content padding>
-  <h3>Ionic Menu Starter</h3>
+<div [ngSwitch]="tabs">
+    <ion-list *ngSwitchCase="'avalibleOrders'">
+        <div class="emptyC" *ngIf="avalibleOrders.length == 0">
+            <img src="assets/img/friendly-ghost.svg" alt="img" class="image">
+            <p>Nada disponible</p>
+            <p>Por el momento</p>
+        </div>  
+      <ion-item style="color: #485465;" *ngFor = "let order of avalibleOrders" (click)="pushOrder(order.$key)">
+        <div>
+          <img src="assets/img/shop.svg" class="inline iconType">
+        <h1 class="inline commerce">#{{order.$key}} </h1>
+        <ion-icon ios="ios-timer" md="md-timer" class="clock"></ion-icon>
+        </div>
+      <div>
+        
+        <span style="font-size:0.9em;" class="inline">Items: {{order.cart.length}}</span>
+        <span style="font-size:0.9em;margin-left: 13.5em;" class="inline" >{{order.expected_time | amLocale:'es'| amTimeAgo:true}}</span>
+        <h2 class="itemInfo">Ganancias: <span style="color: #007A87">${{order.delivery_price}}</span></h2>
+        <h2 class="itemInfo">Productos: <span style="color: #007A87">${{order.products_total}}</span></h2>
+              
+    <div class="directions itemInfo">
+          <span style='color:#485465'>Recoger: {{order.shopName}} </span>
+    </div>
+      <div class="directions itemInfo">
+          <span style='color:#485465'>Entregar: {{order.address.address}} </span>
+        <span class="distance">{{order.distance.toFixed(2)}}km</span>
+    </div>
+      </div>
+    
+      </ion-item>
 
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will show you the way.
-  </p>
+    </ion-list>
 
-  <button ion-button secondary menuToggle>Toggle Menu</button>
+    <ion-list *ngSwitchCase="'takenOrders'">
+        <div class="emptyC" *ngIf="takenOrders.length == 0">
+            <img src="assets/img/friendly-ghost.svg" alt="img" class="image">
+            <p>No aceptas</p>
+            <p>ningun pedido aún</p>
+        </div>  
+        <ion-item style="color: #485465;" *ngFor = "let order of takenOrders" (click)="pushOrder(order.$key)">
+            <div>
+              <img src="assets/img/shop.svg" class="inline iconType">
+            <h1 class="inline commerce">#{{order.$key}} </h1>
+            <ion-icon ios="ios-timer" md="md-timer" class="clock"></ion-icon>
+            </div>
+          <div>
+            
+            <span style="font-size:0.9em;" class="inline" *ngIf="order.type != 'personalized'">Items: {{order.cart.length}}</span>
+            <span style="font-size:0.9em;margin-left: 13.5em;" *ngIf="order.type != 'personalized'" class="inline" >{{order.expected_time | amLocale:'es'| amTimeAgo:true}}</span>
+            <h2 class="itemInfo" *ngIf="order.type != 'personalized'">Ganancias: <span style="color: #007A87" *ngIf="order.type != 'personalized'">${{order.delivery_price}}</span></h2>
+            <h2 class="itemInfo" *ngIf="order.type != 'personalized'">Productos: <span style="color: #007A87" *ngIf="order.type != 'personalized'">${{order.products_total}}</span></h2>
+            <h2 class="itemInfo" *ngIf="order.type == 'personalized'">Descripcion: <span style="color: #007A87" *ngIf="order.type == 'personalized'">${{order.details}}</span></h2>    
+        <div class="directions itemInfo">
+              <span style='color:#485465'*ngIf="order.type != 'personalized'">Recoger: {{order.shopName}} </span>
+        </div>
+          <div class="directions itemInfo">
+              <span style='color:#485465'>Entregar: {{order.address.address}} </span>
+            <span class="distance" *ngIf="order.type != 'personalized'">{{order.distance.toFixed(2)}}km</span>
+        </div>
+          </div>
+        
+          </ion-item>
+    </ion-list>
+    <ion-list *ngSwitchCase="'personalizedOrders'">
+        <div class="emptyC" *ngIf="personalizedOrders.length == 0">
+            <img src="assets/img/friendly-ghost.svg" alt="img" class="image">
+            <p>Ningún pedido</p>
+            <p>personalizado cerca</p>
+        </div>  
+      <ion-item style="color: #485465;" *ngFor = "let order of personalizedOrders" (click)="pushOrder(order.$key)">
+            <div>
+              <img src="assets/img/shop.svg" class="inline iconType">
+            <h1 class="inline commerce">#{{order.$key}} </h1>
+            <ion-icon ios="ios-timer" md="md-timer" class="clock"></ion-icon>
+            </div>
+          <div>
+            <h2 class="itemInfo">Ganancias: <span style="color: #007A87">>=$2.00</span></h2>
+                  
+        <div class="directions itemInfo">
+              <span style='color:#485465'>Detalle: {{order.details}} </span>
+        </div>
+          <div class="directions itemInfo">
+              <span style='color:#485465'>Entregar: {{order.address.address}} </span>
+        </div>
+          </div>
+        
+          </ion-item>
+      
+
+
+    </ion-list>
+  
+  </div>
 </ion-content>

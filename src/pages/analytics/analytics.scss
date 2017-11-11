@@ -1,0 +1,109 @@
+page-analytics {
+    ion-content{
+        font-size: 3.8vw
+      }
+      ion-header{
+        z-index: inherit;  // desapear the header shadown
+        text-align: center;
+        font-family: 'Trueno' !important;
+    }
+    .toolbar-title-md{
+        color: #FFFFFF;
+        text-align: -webkit-auto;
+    }
+   
+      .toolbar-background-md, .toolbar-background-ios {
+          background: $main;
+      }
+      .back-button-icon-md, .back-button-icon-md{
+        color: $green;
+      }
+      .content-md, .content-md {
+        color: #000;
+        background-color: $background;
+      }
+      .section{
+        margin: 0px;
+        margin-top: 0.3em;
+        padding: 5px;
+        font-weight: bold;
+      }
+      .price{
+        margin: 0px;
+        color: $main;
+        font-weight: bold;
+        font-size: 0.8em;
+        display: inline-block;
+        margin-left: 15%;
+      }
+      .priceContent{
+    
+        color: $main;
+        font-weight: bold;
+        text-align: right;
+        font-size: 1.1em;
+      }
+      .title{
+        margin: 0px;
+        display: inline-block;
+        font-weight: bold;
+      }
+      .controls{
+        margin-left: 15%;
+        color: $green;
+        margin-top: 10%;
+        font-size: 1.3em;
+      }
+      .item{
+        background-color: #FFFFFF;
+        border-bottom: 1px solid $background;
+        font-size: 1.3em;
+      }
+      .period{
+        background-color: #FFFFFF;
+        border-bottom: 1px solid $background;
+        font-size: 1.3em;
+        margin: 0px;
+        padding: 0.5em 0px;
+      }
+      .text-input-md{
+        margin: 0px;
+    
+      }
+      .tipe{
+        font-size: 1.1em;
+      }
+      .tipe p{
+        margin-top: 5px;
+        margin-bottom: 5px;
+      }
+      .priceContent{
+        margin-top: 5px;
+        margin-bottom: 5px;
+      }
+      .cart {
+        display: block;
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        z-index: 999;
+        background-color: $main;
+        color: #FFFFFF;
+        text-align: center;
+        font-size: 1.4em;
+        height: 2.5em;
+        font-family: 'Trueno' !important;
+      }
+      .cart ion-icon{
+        margin-top: 3.5%;
+      }
+      .inputContainer {
+        height: 1.2em;
+      }
+      .inline{
+          display: inline-block;
+      }
+}

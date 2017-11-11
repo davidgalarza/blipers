@@ -1,0 +1,57 @@
+<!--
+  Generated template for the AnalyticsPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Estadisticas</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+  <p class="period" (click)="changeInitDate()">Inicio: {{initDataS}}</p>
+  <p class="period" (click)="changeFinishDate()">Fin: {{finishDateS}} </p>
+  <p class="section">Pedidos</p>
+  <ng-container>
+    <ion-grid class="item">
+      <ion-row >
+        <ion-col col-8><p class="title">Pedidos totales</p></ion-col>
+        <ion-col col-4><p class="price">{{numOfOrders}}</p></ion-col>
+      </ion-row>
+      <ion-row >
+        <ion-col col-8><p class="title">Pedidos Terminados</p></ion-col>
+        <ion-col col-4><p class="price">{{numOfCompletedOrders}}</p></ion-col>
+      </ion-row>
+      <ion-row >
+        <ion-col col-8><p class="title">Pedidos Inconclusos</p></ion-col>
+        <ion-col col-4><p class="price">{{numOfIncompletedOrders}}</p></ion-col>
+      </ion-row>
+    </ion-grid>
+  </ng-container>
+  <p class="section">Ganancias</p>
+  <ng-container>
+    <ion-grid class="item">
+      <ion-row >
+        <ion-col col-8><p class="title">Total ganado</p></ion-col>
+        <ion-col col-4><p class="price">${{sales.toFixed(2)}}</p></ion-col>
+      </ion-row>
+      <ion-row >
+        <ion-col col-8><p class="title">Comision(12.5%)</p></ion-col>
+        <ion-col col-4><p class="price">${{commission.toFixed(2)}}</p></ion-col>
+      </ion-row>
+    </ion-grid>
+  </ng-container>
+
+ 
+  <ion-grid class="">
+    <ion-row>
+      <ion-col col-12 class="tipe" style="font-size:1em"><p>Recuerda realizar el pago en la fecha estipulada.</p></ion-col>
+       <ion-col col-12 class="tipe" style="font-size:1em"><p>Pago no realizado significara bloqueo en la plataforma.</p></ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

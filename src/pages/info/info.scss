@@ -1,0 +1,18 @@
+page-info {
+    .toolbar-background-md, .toolbar-background-ios{
+        background: $main !important;
+    }
+    .segment-md .segment-button{
+        border-bottom-color: #FFFFFF !important;
+        color: #FFFFFF !important;
+    }
+    .toolbar-title-md{
+        color: #FFFFFF;
+        font-family: 'Trueno';
+        text-align: right;
+    }
+    .text{
+        font-weight: bold;
+        color: #485465;
+    }
+}

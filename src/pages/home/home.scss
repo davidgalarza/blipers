@@ -1,3 +1,80 @@
 page-home {
+    .item-input .label-md, .item-select .label-md, .item-datetime .label-md, .item-input .label-ios, .item-select .label-ios, .item-datetime .label-ios{
+        color: #FFFFFF;
+    }
+  ion-content{
+    font-size: 3.8vw
+  }
+    .toolbar-background-md, .toolbar-background-ios{
+      background: $main !important;
+  }
+    .segment-md .segment-button{
+        border-bottom-color: #FFFFFF !important;
+        color: #FFFFFF !important;
+        font-family: 'Trueno';
+    }
+    .toolbar-title-md{
+        color: #FFFFFF;
+        font-family: 'Trueno';
+    }
+     .content-md, .content-ios{
+      color: #485465 !important;
+      background-color: #FEFEFE;
+  }
+    .item-md{
+        border: solid 1px #DBDFE3;
+        border-radius: 7px;
+        box-shadow: 4px 3px 15px #DBDFE3;
+        margin-bottom: 1.5em;
 
+    }
+    .list-md .item-block .item-inner {
+    border-bottom: 0px solid #dedede !important;
+    }   
+    .distance{
+    position: absolute;
+    right: 0.9em;
+    background-color: #A8B4C4;
+    color: #FFFFFF;
+    padding: 0.2em;
+    border-radius: 0.2em;
+    }
+    .directions{
+        position: inherit;
+        margin-bottom: 0.8em;
+    }
+    .inline{
+        display: inline-table;
+    }
+    .iconType{
+        max-width: 15% !important;
+    }
+    .commerce{
+        position: absolute;
+            margin-top: 0.5em;
+    margin-left: 0.8em;
+    }
+    .itemInfo{
+        margin-top: 0.5em;
+    }
+    round-progress{
+        width: 15% !important;
+        height: 15% !important;
+    }
+    .clock{
+        font-size: 3em;
+        float: right;
+        color: $green;
+    }
+    .emptyC{
+        width: 70%;
+        margin: 15%;
+ 
+        text-align: center;
+    }
+    .emptyC p{
+        color: #B0A7B5;
+        font-family: 'Trueno' !important;
+        font-size: 1.5em;
+    }
 }

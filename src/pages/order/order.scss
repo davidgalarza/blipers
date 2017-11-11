@@ -1,0 +1,67 @@
+page-order {
+    .item-input .label-md, .item-select .label-md, .item-datetime .label-md, .item-input .label-ios, .item-select .label-ios, .item-datetime .label-ios{
+        color: #FFFFFF;
+    }
+  ion-content{
+    font-size: 3.8vw
+  }
+    .toolbar-background-md, .toolbar-background-ios{
+      background: $main !important;
+  }
+  .toolbar-title-md{
+    color: #FFFFFF;
+
+}
+.time{
+    position: relative;
+    float: right;
+  }
+  #fabs{
+    position:absolute;
+    margin-bottom: 5em;
+    z-index:1;
+  
+    text-align: center
+    }
+    .topB{
+        margin-bottom: 1em;
+    }
+    #saveC{
+        position:absolute;
+        /*center the marker*/
+        top:90%;
+        margin-bottom: 2em;
+        z-index:1;
+        /*size of the image*/
+        width:100%;
+        
+        text-align: center
+    }
+    #saveC button {
+        width: 90%;
+        height: 3em;
+        border-radius: 0.4em;
+    }
+    .fabsC{
+        position:absolute;
+        /*center the marker*/
+        top:40%;
+        left: 70%;
+        margin-bottom: 2em;
+        z-index:1;
+        /*size of the image*/
+        width:auto;
+        
+        text-align: right
+    }
+    .cButton{
+        width: 4em;
+        height: 4em;
+        border-radius: 2em;
+        padding: 1em;
+        display: inline;
+    }
+    .cButton ion-icon{
+        font-size: 2em;
+    }
+}
